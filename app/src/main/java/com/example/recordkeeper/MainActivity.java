@@ -126,7 +126,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     public void onClick(DialogInterface dialogInterface, int i) {
                                         notes.remove(itemToDelete);
                                         arrayAdapter.notifyDataSetChanged();
-                                        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.example.notes", Context.MODE_PRIVATE);
+                                        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.example.notes",
+                                                Context.MODE_PRIVATE);
                                         HashSet<String> set = new HashSet(MainActivity.notes);
                                         sharedPreferences.edit().putStringSet("notes", set).apply();
                                     }
